@@ -1,0 +1,64 @@
+.many__rooms{
+    padding: 8rem 0rem;
+}
+.many{
+    @include flex(column);
+    align-items: center;
+    justify-content: center;
+    gap: 8.8rem;
+    &__top{
+        max-width: 50%;
+        @include flex(column);
+        align-items: center;
+        gap: 24px;
+        h2{
+            @include title_font();
+        }
+        p{
+            @include public_p();
+        }
+        button{
+            @include btn();
+        }
+    }
+    &__bottom{
+        @include flex();
+        justify-content: space-between;
+        .room{
+             >img{
+                width: 100%;
+            }
+            width: 32%;
+            h2{
+                @include title_font($fs:24px);
+            }
+            p{
+                @include public_p();
+            }
+            button{
+                color: #424F7B;
+                margin-top: 32px;
+                gap: 1.3rem;
+                background: none;
+                @include flex();
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 150%;
+            }
+        }
+    }
+}
+@media screen and (max-width:576px){
+    
+    .many__bottom{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 50px;
+        .room{
+            width: 60%;
+        }
+    }
+}

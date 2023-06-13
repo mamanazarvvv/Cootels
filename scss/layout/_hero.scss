@@ -1,0 +1,44 @@
+header{
+    padding: 8rem 0rem;
+}
+.hero{
+    padding-bottom: 10rem;
+    @include jc(space-between);
+    &__left{
+        width: 40%;
+        @include flex(column);
+        gap: 3.2rem;
+        h1{
+            @include title_font();
+        }
+        p{
+            @include public_p();
+        }
+        button{
+            @include btn();
+        }
+    }
+    &__right{
+        width: 50%;
+        @include jc();
+        gap: 24px;
+        img{
+            width: 30%;
+        }
+        .hero__img{
+            margin-top: 150px;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    header{
+        padding-top: 0;
+    }
+    .hero{
+        @include flex(column-reverse);
+        &__left{
+            width: 70%;
+            align-items: center;
+        }
+    }
+}

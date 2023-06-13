@@ -1,0 +1,40 @@
+
+.hotel{
+    @include jc(space-between);
+    padding-bottom: 8rem;
+    gap: 12.6rem;
+    img{
+        width: 30%;
+        height: 100%;
+    }
+    &__right{
+        h2{
+            @include title_font;
+        }
+        p{
+            @include public_p();
+            margin-top: 2.4rem;
+        }
+        button{
+            @include btn();
+            margin-top: 3.2rem;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .hotel{
+        @include flex(column);
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 50%;
+        }
+    .hotel__right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        
+    }
+}

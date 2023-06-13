@@ -1,0 +1,57 @@
+.contact{
+    padding: 8rem 0rem;
+    .container{
+        @include jc(center);
+    }
+}
+.cont{
+    width: 70%;
+    text-align: center;
+    h2{
+        padding-bottom: 6.2rem;
+        @include title_font();
+    }
+    img{
+        margin-bottom: 4.4rem;
+    }
+    p{
+        @include public_p();
+        padding-bottom: 4rem;
+    }
+    span{
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 150%;
+        color: $primary_color;
+        font-family: inter;
+    }
+    .page-div{
+        margin-top: 2.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        div{
+            cursor: pointer;
+            width: .8rem;
+            height: .8rem;
+            background: rgba(250, 176, 71, 0.35);
+            border-radius: 50%;
+            &:focus{
+                background-color: #FAB047;
+            }
+            &:nth-child(2){
+                width: 1.2rem;
+                height: 1.2rem;
+                background-color: #FAB047;
+            }
+        }
+    }
+}
+@media screen and (max-width:576px){
+    .cont{
+        h2{
+            font-size: 3.5rem;
+        }
+    }
+}

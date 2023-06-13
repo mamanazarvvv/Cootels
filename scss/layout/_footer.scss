@@ -1,0 +1,65 @@
+footer{
+    background-color: #0B265A;
+    padding: 120px 0px;
+}
+.foot{
+    @include jc(space-between);
+    align-items: flex-start;
+    &__left{
+        width: 18%;
+        display: flex;
+        flex-direction: column;
+        h2{
+            font-weight: 700;
+            font-size: 3.2rem;
+            color: $third_color;
+            font-family: montserrat;
+            line-height: 3.9rem;
+            margin-bottom: 1.3rem;
+        }
+        p{
+            @include public_p();
+        }
+        .foot-icons{
+            margin-top: 3.6rem;
+            display: flex;
+            gap: 3.2rem;
+        }
+    }
+    &__right{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        .menu{
+            span{
+                font-size: 1.6rem;
+                color: $third_color;
+                font-family: montserrat;
+                line-height: 3.9rem;
+                margin-bottom: 1.3rem;
+                margin-bottom: 2.4rem;
+            }
+            p{
+                @include public_p();
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+
+}
+@media screen and (max-width:466px){
+    .foot{
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        &__left{
+            width: 70%;
+            text-align: center;
+            align-items: center;
+        }
+        &__right{
+            width: 90%;
+            
+        }
+    }
+}

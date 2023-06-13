@@ -1,0 +1,51 @@
+.cabin_cont{
+    padding: 8rem 0;
+}
+.cabins{
+    @include flex(column);
+    gap: 5.2rem;
+    .cabin{
+        @include jc(space-between);
+        gap: 12.6rem;
+        
+        h2{
+            @include title_font();
+        }
+        p{
+            @include public_p();
+        }
+        
+    }
+    .cabin2{
+        @include jc(space-between);
+        gap: 12.6rem;
+        h2{
+            @include title_font();
+        }
+        p{
+            @include public_p();
+        }
+    }
+
+}
+@media screen and (max-width:768px) {
+    .cabin{
+        flex-direction: column-reverse;
+        &__texts{
+            width: 70%;
+        }
+        img{
+            width: 70%;
+        }
+    }
+    .cabin2{
+        margin-top: 50px;
+        flex-direction: column;
+        &__texts{
+            width: 70%;
+        }
+        img{
+            width: 70%;
+        }
+    }
+}
